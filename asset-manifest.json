@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/viosa/static/css/main.0265c2e1.css",
-    "main.js": "/viosa/static/js/main.afd3c1fe.js",
-    "static/js/787.f1e435bd.chunk.js": "/viosa/static/js/787.f1e435bd.chunk.js",
-    "static/media/placeholder1.png": "/viosa/static/media/placeholder1.ee532fbaff5fedec28c2.png",
-    "static/media/logo.svg": "/viosa/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/viosa/index.html",
-    "main.0265c2e1.css.map": "/viosa/static/css/main.0265c2e1.css.map",
-    "main.afd3c1fe.js.map": "/viosa/static/js/main.afd3c1fe.js.map",
-    "787.f1e435bd.chunk.js.map": "/viosa/static/js/787.f1e435bd.chunk.js.map"
+    "main.css": "./static/css/main.3c2eee2c.css",
+    "main.js": "./static/js/main.0fa6450c.js",
+    "static/js/787.f1e435bd.chunk.js": "./static/js/787.f1e435bd.chunk.js",
+    "static/media/placeholder1.png": "./static/media/placeholder1.ee532fbaff5fedec28c2.png",
+    "static/media/logo.svg": "./static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "./index.html",
+    "main.3c2eee2c.css.map": "./static/css/main.3c2eee2c.css.map",
+    "main.0fa6450c.js.map": "./static/js/main.0fa6450c.js.map",
+    "787.f1e435bd.chunk.js.map": "./static/js/787.f1e435bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0265c2e1.css",
-    "static/js/main.afd3c1fe.js"
+    "static/css/main.3c2eee2c.css",
+    "static/js/main.0fa6450c.js"
   ]
 }
