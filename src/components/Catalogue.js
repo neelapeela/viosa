@@ -28,6 +28,11 @@ const Catalogue = () => {
 
         <div className='recommended'>
             <strong>Courses for you</strong>
+            <div className='recommendedscroll'>
+                <div className='panel'>
+                    
+                </div>
+            </div>
         </div>
     </div>
   );
