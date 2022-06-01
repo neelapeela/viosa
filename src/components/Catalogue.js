@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Route, Routes, HashRouter} from 'react-router-dom'
-import placeholder1 from '../icons/placeholder1.png'
+import placeholder2 from '../icons/placeholder2.png'
+import rightscroll from '../icons/rightscroll.png'
 
 const Catalogue = () => {
   return (
@@ -30,7 +31,24 @@ const Catalogue = () => {
             <strong>Courses for you</strong>
             <div className='recommendedscroll'>
                 <div className='panel'>
-                    
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
                 </div>
             </div>
         </div>
