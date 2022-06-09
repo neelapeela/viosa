@@ -15,10 +15,37 @@ code {
     monospace;
 }
 
+strong{
+  color: #EB6A3F;
+}
+
+
 .App{
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+.quickactions{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  right: 2.5%;
+  background-color: white;
+  padding: 10px;
+  margin: 5px;
+  z-index: 10;
+  border-radius: 30px;
+}
+
+.quickactions img{
+  padding: 5px;
+  height: 20px;
+}
+
+.quickactions strong{
+  color: #EB6A3F;
 }
 
 .navpanel{
@@ -89,7 +116,7 @@ code {
 .pageContent{
   position: relative;
   margin-left: 22%;
-  margin-top: 2%;
+  margin-top: 3%;
   margin-right: 2%;
 }
 
@@ -104,7 +131,7 @@ code {
   overflow-x: scroll;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 30px;
+  margin-right: 5px;
   border-radius: 10px;
   padding-right: 10px;
 }
@@ -162,8 +189,10 @@ code {
   padding: 10px;
   border-radius: 10px;
   margin-right: 15px;
-  min-width: 31%;
-  min-height: 31%;
+  min-width: 25%;
+  min-height: 25%;
+  max-height: 25%;
+  max-width: 25%;
 }
 
 .recommendedscroll .panel img{
@@ -181,7 +210,7 @@ code {
 
 /*scrollbar*/
 ::-webkit-scrollbar {
-  width: 100px;
+  width: 17px;
 }
 
 /* Track */
@@ -201,4 +230,83 @@ code {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #d3a292;
+}
+
+.courseheader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shortinfo{
+  width: 40%;
+}
+
+.shortinfo .time{
+  background-color: rgb(84, 20, 84);
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  align-items: center;
+  max-width: fit-content;
+  max-height: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.shortinfo .time img{
+  height: 20px;
+  width: 20px;
+  padding-right: 5px;
+}
+
+.shortinfo .time p{
+  color: white;
+  font-size: x-small;
+}
+
+.pay{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF7E7;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.pay strong{
+  font-size: larger;
+}
+
+.pay button{
+  background-color: #EB6A3F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: auto;
+}
+
+.coursecontent{
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+}
+
+.coursecontent img{
+  max-width: 90%;
+  max-height: 90%;
+  margin: 20px;
+}
+
+.landing{
+  width: 100vh;
+  height: 100vh;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
 }

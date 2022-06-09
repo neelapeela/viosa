@@ -52,6 +52,32 @@ const Catalogue = () => {
                 </div>
             </div>
         </div>
+
+        <div className='recommended'>
+            <strong>Courses for you</strong>
+            <div className='recommendedscroll'>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+                <div className='panel'>
+                    <img src={placeholder2}></img>
+                    <strong>UI/UX Designing</strong>
+                    <p>User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic element...</p>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }

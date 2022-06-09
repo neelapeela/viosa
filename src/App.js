@@ -4,7 +4,13 @@ import viosalogo from './icons/viosa-logo.png'
 import catalogueicon from './icons/catalogue-icon.png'
 import Catalogue from './components/Catalogue';
 import Dashboard from './components/Dashboard';
+import search from './icons/search.png'
+import profilephoto from './icons/profilephoto.png'
+import timer from './icons/timer.png'
+import bell from './icons/bell.png'
 import {BrowserRouter as Router, Route, Routes, Navigate, useNavigate} from 'react-router-dom'
+import CoursePage from './components/CoursePage';
+import Landing from './components/Landing';
 
 const App = () => {
   
@@ -40,10 +46,19 @@ const App = () => {
             </div>
           </div>
         </div>
+        <div className='quickactions'>
+          <img src={search}></img>
+          <img src={bell}></img>
+          <img src={timer}></img>
+          <strong>Akshay Sharma</strong>
+          <img src={profilephoto}></img>
+  </div>
         <div className='pageContent'>
         <Routes>
+          <Route path='/landing' element={<Landing/>}/>
           <Route path='/catalogue' element={<Catalogue/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/course' element={<CoursePage/>}/>
         </Routes>
         </div>
       </div>
