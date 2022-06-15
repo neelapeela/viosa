@@ -9,6 +9,7 @@ import profilephoto from './icons/profilephoto.png'
 import timer from './icons/timer.png'
 import bell from './icons/bell.png'
 import {BrowserRouter as Router, Route, Routes, Navigate, useNavigate} from 'react-router-dom'
+import { HashRouter } from 'react-router-dom';
 import CoursePage from './components/CoursePage';
 import Landing from './components/Landing';
 import Profile from './components/Profile';
@@ -16,12 +17,12 @@ import Profile from './components/Profile';
 const App = () => {
   
   return (
-    <Router>
+    <HashRouter>
         <Routes>
           <Route path='/profile/*' element={<Profile/>}/>
           <Route path='/home/*' element={<Landing/>}/>
         </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
