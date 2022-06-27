@@ -13,9 +13,9 @@ import { HashRouter } from 'react-router-dom';
 import CoursePage from './components/CoursePage';
 import Landing from './components/Landing';
 import Profile from './components/Profile';
+import { useState } from 'react';
 
 const App = () => {
-  
   return (
     <HashRouter>
         <Routes>

@@ -9,8 +9,10 @@ import bell from '../icons/bell.png'
 import {BrowserRouter as Router, Route, Routes, Navigate, useNavigate} from 'react-router-dom'
 import CoursePage from '../components/CoursePage';
 import Landing from '../components/Landing';
+import { useState } from 'react';
 
 const Profile = () => {
+  const [name, setName] = useState('Not logged in')
   
   return (
       <div className="App">
@@ -47,7 +49,7 @@ const Profile = () => {
           <img src={search}></img>
           <img src={bell}></img>
           <img src={timer}></img>
-          <strong>Akshay Sharma</strong>
+          <strong>{name}</strong>
           <img src={profilephoto}></img>
   </div>
   
