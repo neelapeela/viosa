@@ -4,7 +4,7 @@ import cancel from '../icons/cancel.png'
 import { useState } from 'react';
 import axios from 'axios';
 
-const Login = ({setRenderLogin, setRenderSignup}) => {
+const Login = ({setRenderLogin, setRenderSignup, setUsername}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [showMessage, setShowMessage] = useState(false)
@@ -20,17 +20,19 @@ const Login = ({setRenderLogin, setRenderSignup}) => {
                   headers: { "Content-Type": "application/json" }
                 }
               );
-              if(response.data.message=='Invalid Credentials'){
+              if(response.data.error=='Invalid Credentials'){
                 setMessage('Invalid credentials')
                 setShowMessage(true)
               }
-              else if(response.data.message=='User does not exists'){
+              else if(response.data.error=='User does not exists'){
                 setMessage('An account with the provided email does not exist')
                 setShowMessage(true)
               }
               else{
+                setUsername(response.data.data.name)
                 navigate('../../profile/catalogue')
               }
+              console.log(response)
         } catch (e){
             console.log(e)
         }

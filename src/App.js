@@ -16,11 +16,13 @@ import Profile from './components/Profile';
 import { useState } from 'react';
 
 const App = () => {
+  const [username, setUsername] = useState('Not logged in')
+
   return (
     <HashRouter>
         <Routes>
-          <Route path='/profile/*' element={<Profile/>}/>
-          <Route path='/home/*' element={<Landing/>}/>
+          <Route path='/profile/*' element={<Profile username={username}/>}/>
+          <Route path='/home/*' element={<Landing setUsername={setUsername}/>}/>
         </Routes>
     </HashRouter>
   );

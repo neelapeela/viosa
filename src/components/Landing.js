@@ -10,7 +10,7 @@ import Login from './Login'
 import { useState } from 'react'
 import Signup from './Signup'
 
-const Landing = () => {
+const Landing = ({setUsername}) => {
   let navigate = useNavigate();
 
   const homeRedirect = (e) =>{
@@ -47,7 +47,7 @@ const Landing = () => {
             <button onClick={setRenderHandler}>Login</button>
         </div>
         {renderSignup?<Signup setRenderSignup={setRenderSignup} setRenderLogin={setRenderLogin}></Signup>:null}
-        {renderLogin?<Login setRenderSignup={setRenderSignup} setRenderLogin={setRenderLogin}></Login>:null}
+        {renderLogin?<Login setRenderSignup={setRenderSignup} setRenderLogin={setRenderLogin} setUsername={setUsername}></Login>:null}
         <div className='homecontent'>
             <Routes>
                 <Route path='home' element={<Home/>}/>

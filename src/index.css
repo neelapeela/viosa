@@ -321,6 +321,8 @@ strong{
   padding: 10px;
   color: #EB6A3F;
   border-radius: 10px;
+  border: solid 2px;
+  outline: 0;
 }
 
 .navbar img{
@@ -620,12 +622,17 @@ border-radius: 50px;
   padding: 20px;
   margin: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.courselist .course .left{
+  display: flex;
+  flex-direction: row;
 }
 
 .courselist .course img{
-  width: 20%;
-  height: 20%;
+  width: 50%;
+  height: 50%;
   margin: 10px;
 }
 

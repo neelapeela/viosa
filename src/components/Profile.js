@@ -11,9 +11,9 @@ import CoursePage from '../components/CoursePage';
 import Landing from '../components/Landing';
 import { useState } from 'react';
 
-const Profile = () => {
-  const [name, setName] = useState('Not logged in')
-  
+const Profile = ({username}) => {
+  const [courseId, setCourseId] = useState('')
+
   return (
       <div className="App">
         <div className='navpanel'>
@@ -49,16 +49,16 @@ const Profile = () => {
           <img src={search}></img>
           <img src={bell}></img>
           <img src={timer}></img>
-          <strong>{name}</strong>
+          <strong>{username}</strong>
           <img src={profilephoto}></img>
   </div>
   
         <div className='pageContent'>
         <Routes>
           <Route path='landing/*' element={<Landing/>}/>
-          <Route path='catalogue' element={<Catalogue/>}/>
+          <Route path='catalogue' element={<Catalogue setCourseId={setCourseId}/>}/>
           <Route path='dashboard' element={<Dashboard/>}/>
-          <Route path='course' element={<CoursePage/>}/>
+          <Route path='course' element={<CoursePage courseId={courseId}/>}/>
         </Routes>
         </div>
       </div>

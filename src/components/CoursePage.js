@@ -3,14 +3,35 @@ import placeholder2 from '../icons/placeholder2.png'
 import rightscroll from '../icons/rightscroll.png'
 import clock from '../icons/clock.png'
 import courseplaceholder from '../icons/courseplaceholder.png'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
-const CoursePage = () => {
+const CoursePage = ({courseId}) => {
+    const [course, setCourse] = useState([])
+    useEffect(()=>{
+        const getCourseById = async () =>{
+            try{
+                const response = await axios.get(
+                    `http://localhost:3000/course/getCoursebyId/${courseId}`,
+                    {
+                      headers: { "Content-Type": "application/json" }
+                    }
+                  );
+                  console.log(response.data.data)
+                    setCourse(response.data.data)
+            } catch (e){
+                console.log(e)
+            }
+        }
+        getCourseById()
+    }, [])
+
   return (
     <div className='coursepage'>
         <div className='courseheader'>
             <div className='shortinfo'>
-                <h1>UI & UX Designing</h1>
-                <p>The difference between User Interface (UI) and User Experience (UX) is that UI refers to the aesthetic elements by which people interact with a product, while UX is about the experience a user has with a product or service</p>
+                <h1>{course.name}</h1>
+                <p>{course.description}</p>
                 <strong>23+ Pages of detailed Career Analysis Scorecard</strong>
                 <div className='time'>
                     <img src={clock}></img>
@@ -28,7 +49,7 @@ const CoursePage = () => {
         <div className='coursecontent'>
             <img src={courseplaceholder}></img>
             <h2>About the course</h2>
-            <p>Career Assessment is a 5-Dimensional Career Analysis for school/college students, graduates, post-graduate, freshers and working professionals. This assessment is conducted in order to evaluate an individual’s skills, knowledge, abilities, personality traits, attitudes, and job / academic potential & performance. Career Assessment is a 5-Dimensional Career Analysis for school/college students, graduates, post-graduate, freshers and working professionals. This assessment is conducted in order to evaluate an individual’s skills, knowledge, abilities, personality traits, attitudes, and job / academic potential & performance.</p>
+            <p>{course.about}</p>
         </div>
     </div>
   );
